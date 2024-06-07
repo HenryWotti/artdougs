@@ -8,7 +8,7 @@ interface PhoneProps extends HTMLAttributes<HTMLDivElement> { /**O PhoneProps es
 
 const Phone = ({imgSrc, className, dark = false, ...props} : PhoneProps) => {
     return (
-        <div className={cn("relative pointer-events-none z-50 overflow-hidden", className="")} {...props} style={{ transform: 'scale(0.8)' }}>
+        <div className={cn("relative pointer-events-none z-50 overflow-hidden", className="")} {...props}>
             <img src={dark ? "/phone-template-dark-edges.png" : "/phone-template-white-edges.png"} alt="phone image" className="pointer-events-none z-50 select-none"/>
 
             <div className="absolute -z-10 inset-0">
