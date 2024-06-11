@@ -5,7 +5,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 First, run the development server:
 
 ```bash
-first run "yarn" to download all dependencies
+first run 'yarn' to download all dependencies
 #
 npm run dev
 # or
