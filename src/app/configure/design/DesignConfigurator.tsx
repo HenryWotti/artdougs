@@ -242,7 +242,7 @@ const DesignConfigurator = ({
                             </div>
                         </div>
                       </div>
-                </ScrollArea>              
+                </ScrollArea>            
             </div>
         </div>
     )
