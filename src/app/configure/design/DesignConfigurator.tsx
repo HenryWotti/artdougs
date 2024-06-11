@@ -3,7 +3,7 @@
 import HandleComponent from '@/components/HandleComponent'
 import { AspectRatio } from '@/components/ui/aspect-ratio'
 import { ScrollArea } from '@/components/ui/scroll-area'
-import { cn } from '@/lib/utils'
+import { cn, formatPrice } from '@/lib/utils'
 import NextImage from 'next/image'
 import { Rnd } from 'react-rnd'
 import { RadioGroup } from '@headlessui/react'
@@ -207,23 +207,23 @@ const DesignConfigurator = ({
                                                 )
                                                 }>
                                                 <span className='flex items-center'>
-                                                <span className='flex flex-col text-sm'>
-                                                    <RadioGroup.Label
-                                                    className='font-medium text-gray-900'
-                                                    as='span'>
-                                                    {option.label}
-                                                    </RadioGroup.Label>
+                                                    <span className='flex flex-col text-sm'>
+                                                        <RadioGroup.Label
+                                                        className='font-medium text-gray-900'
+                                                        as='span'>
+                                                        {option.label}
+                                                        </RadioGroup.Label>
 
-                                                    {option.description ? (
-                                                    <RadioGroup.Description
-                                                        as='span'
-                                                        className='text-gray-500'>
-                                                        <span className='block sm:inline'>
-                                                        {option.description}
-                                                        </span>
-                                                    </RadioGroup.Description>
-                                                    ) : null}
-                                                </span>
+                                                        {option.description ? (
+                                                        <RadioGroup.Description
+                                                            as='span'
+                                                            className='text-gray-500'>
+                                                            <span className='block sm:inline'>
+                                                            {option.description}
+                                                            </span>
+                                                        </RadioGroup.Description>
+                                                        ) : null}
+                                                    </span>
                                                 </span>
 
                                                 <RadioGroup.Description
