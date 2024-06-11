@@ -242,7 +242,28 @@ const DesignConfigurator = ({
                             </div>
                         </div>
                       </div>
-                </ScrollArea>            
+                </ScrollArea>
+
+                <div className='w-full px-8 h-16 bg-white'>
+                    <div className='h-px w-full bg-zinc-200' />
+                    <div className='w-full h-full flex justify-end items-center'>
+                        <div className='w-full flex gap-6 items-center'>
+                        <p className='font-medium whitespace-nowrap'>
+                            {formatPrice(
+                            (BASE_PRICE + options.finish.price + options.material.price) /
+                                100
+                            )}
+                        </p>
+                        <Button
+                            size="sm"
+                            className="w-full" 
+                        >
+                            Continue
+                            <ArrowRight className='h-4 w-4 ml-1.5 inline' />
+                        </Button>
+                        </div>
+                    </div>
+                </div>           
             </div>
         </div>
     )
