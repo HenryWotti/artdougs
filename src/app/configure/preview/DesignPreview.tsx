@@ -12,6 +12,7 @@ import { useEffect, useState } from 'react'
 import Confetti from 'react-dom-confetti'
 import { useRouter } from 'next/navigation'
 import { useToast } from '@/components/ui/use-toast'
+import { createCheckoutSession } from './actions'
 /* 
 import { createCheckoutSession } from './actions'
 import { useKindeBrowserClient } from '@kinde-oss/kinde-auth-nextjs'
@@ -35,12 +36,14 @@ const DesignPreview = ({ configuration }: { configuration: Configuration }) => {
 
     const { label: modelLabel } = MODELS.options.find(
         ({ value }) => value === model
-      )!
+    )!
     
-      let totalPrice = BASE_PRICE
-      if (material === 'polycarbonate')
-        totalPrice += PRODUCT_PRICES.material.polycarbonate
-      if (finish === 'textured') totalPrice += PRODUCT_PRICES.finish.textured
+    let totalPrice = BASE_PRICE
+    if (material === 'polycarbonate')
+    totalPrice += PRODUCT_PRICES.material.polycarbonate
+    if (finish === 'textured') totalPrice += PRODUCT_PRICES.finish.textured
+
+
 
     return (
     <>
@@ -134,6 +137,7 @@ const DesignPreview = ({ configuration }: { configuration: Configuration }) => {
 
                     <div className='mt-8 flex justify-end pb-12'>
                         <Button
+                            isLoading={true} loadingText='loading' disabled={true}
                             /*onClick={() => handleCheckout()}*/
                             className='px-4 sm:px-6 lg:px-8'>
                             Check out
