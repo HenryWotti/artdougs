@@ -210,7 +210,7 @@ export default function Home() {
           <div className='mb-12 px-6 lg:px-8'>
             <div className='mx-auto max-w-2xl sm:text-center'>
               <h2 className='order-1 mt-2 tracking-tight text-center text-balance !leading-tight font-bold text-5xl md:text-6xl text-gray-900'>
-                Upsolad your photo and get {' '}
+                Upload your photo and get {' '}
                 <span className='relative px-2 bg-green-600 text-white'>
                   your own case
                 </span>{' '}
